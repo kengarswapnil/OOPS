@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class OOPS {
+    public static void main(String[] args) {
+        Pen p = new Pen();
+        p.setcolor("yellow");
+        System.out.println(p.color);
+        p.setcolor("Red");
+        System.out.println(p.color);
+        
+        p.setTrip(5);
+        System.out.println(p.trip);
+    }
+}
+class Pen{
+    String color;
+    int trip;
+    
+    void setcolor(String newcolor)
+    {
+        color = newcolor;
+    }
+    
+    void setTrip(int newtrip)
+    {
+        trip = newtrip;
+    }
+}
