@@ -1,0 +1,21 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class Acessmodifier {
+    public static void main(String[] args) {
+        BankAccount bank = new BankAccount();
+        
+        //public use another class
+        bank.username = "swapnil";
+        
+        //private not use another class
+        bank.password ="swapnil";
+        System.out.println(bank.username);
+    }
+}
+
+class BankAccount{
+    public String username ;
+    private String password;
+    
+}
