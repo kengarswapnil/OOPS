@@ -1,0 +1,28 @@
+
+public class Chess{
+    public static void main(String[] args) {
+        Queen q = new Queen();
+        q.moves();
+        
+        //king 
+        king k = new king();
+        k.moves();
+    }
+}
+
+  interface Chessplayer
+    {
+        void moves();
+    }
+
+class king implements Chessplayer{
+    public void moves(){
+        System.out.println("left,right,up,down diagonal");
+    }
+}
+
+class Queen implements Chessplayer{
+    public void moves(){
+        System.out.println("right,left,up,down");
+    }
+}
