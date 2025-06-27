@@ -1,0 +1,27 @@
+public class Animal{
+	public static void main(String[] args) {
+		   Dog tom = new Dog();
+		   tom.eats();
+		   tom.breed();
+		   tom.leg=4;
+		   System.out.println(tom.leg);
+		   tom.color = "black";
+		   System.out.println(tom.color);
+	}
+	
+	String color;
+	
+	void eats(){
+		  System.out.println("eats");
+	}
+	
+	void breed(){
+		
+		System.out.println("breed");
+}
+}
+class Dog extends Animal {
+	int leg;
+	
+}
+	   
