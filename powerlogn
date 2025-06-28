@@ -1,0 +1,24 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static int halfpower(int x, int n)
+    {
+        if(n==0)
+        {
+            return 1;
+        }
+       
+        int half = halfpower(x,n/2) * halfpower(x,n/2);
+        
+        if(n % 2!= 0)
+        {
+            return half = x * half;
+        }
+        return half;
+    }
+    public static void main(String[] args) {
+        System.out.println(halfpower(2,19));
+    }
+}
