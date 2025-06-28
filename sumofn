@@ -1,0 +1,42 @@
+public class Main {
+	public static void printn(int n)
+	{
+		   if(n==1)
+		   {
+		   	  System.out .print(n+" ");
+		   	  return;
+		   }
+		   printn(n-1);
+		   System.out.print(n+" ");
+		  
+	}
+	
+	
+	public static int Fact(int n)
+	{
+		   if(n==0)
+		   {
+		   	  return 1;
+		   }
+		   	  
+		   int fact1 = Fact(n-1);
+		   int fact2 = n * Fact(n-1);
+		   return fact2;
+	}
+	
+	public static int sum(int n)
+	{
+		   if(n==0)
+		   {
+		   	 return 1;
+		   }
+		   int sum1= sum(n-1);
+		   int sum2 = n*sum(n-1);
+		   return sum2;
+	}
+	public static void main(String[] args) {
+		  //printn(5);
+		  System.out.println(Fact(3));
+		  System.out.println(sum(5));
+	}
+}
