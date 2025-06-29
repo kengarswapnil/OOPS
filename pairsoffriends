@@ -1,0 +1,43 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    //paris frinds
+   public static int pairs(int n)
+    {
+        if(n==2 || n==1)
+        {
+           
+            return n;
+        }
+        
+        return pairs(n-1)+(n-1)*pairs(n-2);
+    }
+    
+    //binary string
+    
+    public static void binarystr(int n ,int i,String str)
+    {
+        if(n==0)
+        {
+         System.out.println(str);
+         return ;
+        }
+        
+        binarystr(n-1,0,str+"0");
+        if(i==0)
+        {
+            binarystr(n-1,1,str+"1");
+        }
+    }
+   
+    public static void main(String[] args) {
+    
+       System.out.println( pairs(3));
+       String str = "swapnill";
+       str(str,0,new StringBuilder(""),new boolean[26]);
+       
+       binarystr(3,0,"");
+       
+    }
+}
