@@ -1,0 +1,28 @@
+public class Main {
+
+    public static void digits(int arr[]) {
+        int n = arr.length;
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    // Ensure all indices are different
+                    if (i != j && j != k && i != k) {
+                        int num = arr[i] * 100 + arr[j] * 10 + arr[k];
+                        if (num % 2 == 0) { // even number check
+                            count++;
+                        }
+                    }
+                }
+            }
+        }
+
+        System.out.println("Total even 3-digit numbers = " + count);
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 4};
+        digits(arr);
+    }
+}
