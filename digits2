@@ -18,8 +18,10 @@ public class Main {
 		                {
 		  	     	    	   if(i!=j && j!=k && k!=i)
 		  	     	    	   {
-		  	     	    	   	   	     	    
-		  	     	    	   int num = arr[i]*100 + arr[j]*10 + arr[k];
+		  	     	    	   	   	 int d1 = arr[i];
+                                                         if(d1==0)
+                                                           continue;
+		  	     	    	   int num = d1*100 + arr[j]*10 + arr[k];
 		  	     	    	   	  if(num % 2 ==0)
 		  	     	    	   	  {
 		  	     	    	   	  	   set.add(num);
