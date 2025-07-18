@@ -1,0 +1,31 @@
+import java.util.*;
+
+
+public class longstr {
+    
+    public static int longstr(String s){
+        
+        int  lhs =0;
+        int ans =0;
+        
+        Set<Character>set = new HashSet<>();
+        
+        for(int rhs=0;rhs<s.length();rhs++)
+        {
+            
+            while(set.contains(s.charAt(rhs)))
+            {
+                set.remove(s.charAt(lhs));
+                lhs++;
+            }
+            set.add(s.charAt(rhs));
+            ans = Math.max(ans ,rhs-lhs+1);
+        }
+        return ans;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println(longstr("bbbb"));
+    }
+}
